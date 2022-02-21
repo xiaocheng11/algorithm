@@ -25,7 +25,7 @@ func maxPathSum(root *TreeNode) int {
 
 		innerMaxSum := left + root.Val + right
 		maxSum = max(maxSum, innerMaxSum)
-		return root.Val + max(left, right)
+		return root.Val + max(left, right) //只能选择一条路径，不能两头都选
 	}
 	dfs(root)
 	return maxSum
