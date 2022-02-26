@@ -10,13 +10,10 @@ func HeadSort(array []int) []int {
 	//第一步，先将数据写成大顶堆
     heapInsert(array, lenth)
     //然后就是取出数据，做heapify
-    for i := lenth - 1; i >= 0; i-- {
+    for i := lenth - 1; i >= 1; i-- {
     	//交换值
     	array[i],array[0] = array[0],array[i]
-    	//然后长度-1
-    	lenth--
-    	//
-    	heapify(array, 0, lenth)
+    	heapify(array, 0, i)
 	}
 	return array
 }

@@ -10,7 +10,7 @@ type ListNode struct {
 //先遍历到 m 处，翻转，再拼接后续，注意指针处理
 func reverseBetween(head *ListNode, left int, right int) *ListNode {
 	// 思路：先遍历到m处，翻转，再拼接后续，注意指针处理
-	// 输入: 1->2->3->4->5->NULL, m = 2, n = 4
+	// 输入: 1->2->03->4->5->NULL, m = 2, n = 4
 	if head == nil {
 		return head
 	}
@@ -19,7 +19,7 @@ func reverseBetween(head *ListNode, left int, right int) *ListNode {
 	dummy.Next = head
 	head = dummy
 	//然后开始循环，找到要反转的位置
-	// 最开始：0->1->2->3->4->5->nil
+	// 最开始：0->1->2->03->4->5->nil
 	var pre *ListNode
 	var i = 0
 	for i < left {
@@ -27,7 +27,7 @@ func reverseBetween(head *ListNode, left int, right int) *ListNode {
 		head = head.Next
 		i++
 	}
-	// 遍历之后： 1(pre)->2(head)->3->4->5->NULL
+	// 遍历之后： 1(pre)->2(head)->03->4->5->NULL
 	var next *ListNode
 	// 用于中间节点连接
 	var mid = head

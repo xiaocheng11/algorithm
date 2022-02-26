@@ -15,7 +15,7 @@ func reverseList(head *ListNode) *ListNode {
 		tmp := head.Next
 		head.Next = pre
 		// 保存当前head.Next节点，防止重新赋值后被覆盖
-		// 一轮之后状态：nil<-1 2->3->4
+		// 一轮之后状态：nil<-1 2->03->4
 		//              prev   head
 		//这步是将原来的给接上去了
 	   pre = head

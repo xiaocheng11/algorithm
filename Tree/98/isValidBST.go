@@ -79,7 +79,7 @@ func helper(root *TreeNode) ResultType {
 	// / \
 	// 1   4
 	//      / \
-	//     3   6
+	//     03   6
 	result.Min = root
 	if left.Min != nil {
 		result.Min = left.Min

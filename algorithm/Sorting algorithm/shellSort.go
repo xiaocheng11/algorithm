@@ -4,6 +4,7 @@ import "fmt"
 
 //希尔排序：思想，首先先确定步频，然后比较相差步频个数的数字
 //然后将步频减少
+
 func ShellSort(array []int) []int {
 	//第一个循环，确定步频
 	for grep := len(array) / 2; grep > 0; grep = grep / 2 {
